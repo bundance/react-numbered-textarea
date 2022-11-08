@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './NumberedTextArea.styles';
-import { NumberedTextAreaProps } from './numberedTextArea.types';
+import { NumberedTextAreaProps } from './NumberedTextArea.types';
 import { useLineNumbers } from './useLineNumbers';
 
 const DEFAULT_TEXTAREA_HEIGHT = 368;
@@ -29,7 +29,7 @@ const NumberedTextArea = (props: NumberedTextAreaProps): JSX.Element => {
   };
 
   const handlePaste = (e: any) => {
-    // A paste event has been triggered, but we can't get the updated value 
+    // A paste event has been triggered, but we can't get the updated value
     // in the textarea yet,as it's not available until the onChange event is
     // triggered.
     setIsPasted(true);

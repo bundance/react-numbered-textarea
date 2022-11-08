@@ -1,4 +1,5 @@
-import styled, { StyledComponent} from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 
 export const TextArea = styled.textarea`
   margin: 0;
@@ -29,18 +30,16 @@ export const ContentTextArea = styled(TextArea)<{ isError: boolean }>`
   overflow: auto;
 `;
 
-// blobby - you'er here. Write up what works and what doesn't when typing Styled Componetns (thsi works)
-export const LineNumbers = styled(TextArea)<{ height: number }>`
+export const LineNumbers = React.memo(styled(TextArea)<{ height: number }>`
   font-family: lucida console, courier new, courier, monospace;
   font-weight: 400;
   color: #c7c9cc;
   display: flex;
   overflow-y: hidden;
-  height: ${({ height }: { height: number } = { height: 300 }) =>
-    `${height}px`};
+  height: ${({ height }: { height: number } = { height: 300 }) => `${height}px`};
   text-align: right;
   padding-left: 10px;
-`;
+`);
 
 export const Wrapper = styled.div<{ height?: number }>`
   position: relative;
