@@ -1,4 +1,4 @@
-import { LineNumberDetails } from './numberedTextArea.types';
+import { LineNumberDetails } from './NumberedTextArea.types';
 
 export const DEFAULT_LINE_NUMBER_TEXT_AREA_HEIGHT = 50;
 export const DEFAULT_LINE_NUMBER_COLS = 1;
@@ -26,7 +26,7 @@ export const createLineNumbers = (text: string = ''): number[] => {
   return newLineNumbers;
 }
 
-export const convertLineNumbersToString = (lineNumbers: number[]): string => 
+export const convertLineNumbersToString = (lineNumbers: number[]): string =>
   lineNumbers
     .reduce((acc, lineNumberValue) => `${acc}\n${lineNumberValue}`, '')
     .trim();
